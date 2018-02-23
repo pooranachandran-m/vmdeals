@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,12 +22,24 @@ public class DealsController {
 	private static List<Deal> deals = new ArrayList<>();
 
 	static {
+		
 		deals.add(new Deal("UID20180218_0001", "Dell XPS 15", "Offer price is 1200$ was 1500$, save 300$"));
 		deals.add(new Deal("UID20180218_0002", "Dell XPS 13", "Offer price is 1100$ was 1400$, save 300$"));
 		deals.add(new Deal("UID20180218_0003", "iPhone X", "Offer price is 899$ was 999$, save 100$"));
 		deals.add(new Deal("UID20180218_0004", "iPhone 8", "Offer price is 799$ was 899$, save 100$"));
+		deals.add(new Deal("UID20180218_0005", "iPhone 6", "Offer price is 799$ was 899$, save 100$"));
+		deals.add(new Deal("UID20180218_0006", "iPhone 6s", "Offer price is 799$ was 899$, save 100$"));
+		deals.add(new Deal("UID20180218_0007", "iPhone 5", "Offer price is 799$ was 899$, save 100$"));
+		deals.add(new Deal("UID20180218_0008", "iPhone 6s", "Offer price is 799$ was 899$, save 100$"));
+		deals.add(new Deal("UID20180218_0009", "iPhone 4", "Offer price is 799$ was 899$, save 100$"));
+		deals.add(new Deal("UID20180218_0010", "iPhone 4s", "Offer price is 799$ was 899$, save 100$"));
+		deals.add(new Deal("UID20180218_0011", "iPhone 3", "Offer price is 799$ was 899$, save 100$"));
+		deals.add(new Deal("UID20180218_0012", "iPhone 3s", "Offer price is 799$ was 899$, save 100$"));
+		deals.add(new Deal("UID20180218_0013", "iPhone 2", "Offer price is 799$ was 899$, save 100$"));
+		deals.add(new Deal("UID20180218_0014", "iPhone 2s", "Offer price is 799$ was 899$, save 100$"));
 	}
 
+	@CrossOrigin(origins = "*")
 	@GetMapping("/list")
 	public List<Deal> list() {
 		System.out.println("getting reqeust");
