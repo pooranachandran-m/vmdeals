@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>vmdeals</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Deals Application</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
